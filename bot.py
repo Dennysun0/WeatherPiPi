@@ -2,6 +2,8 @@ from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 from weather import obtener_temperatura
+from storage import guardar_temperatura
+
 
 
 
