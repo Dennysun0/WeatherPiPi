@@ -18,6 +18,7 @@ def guardar_temperatura(dia, minima, maxima):
         datos = {}  #si nuestro JSON no exite creamos uno
 
     #[dia] lo que hace es añadir datos dentro de la clave dia
+    #ADEMÁS, comprueba si la clave de dicho día existe y así evita duplicidad de datos
     datos[dia] = {      
             "minima": minima,
             "maxima": maxima
