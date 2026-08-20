@@ -7,7 +7,28 @@
 </head>
 <body>
     <h1>Temperatura de Palencia</h1>
+    
+    <h2>Temperaturas</h2>
 
+    <div id="temperaturas"></div>
+
+    <script>
+        fetch("/temperaturas")
+        .then(respuesta => respuesta.json())
+        .then(datos => {
+            const contenedor = document.getElementById("temperaturas");
+
+            for(const dia in datos) {
+                contenedor.innerHTML += `
+                        <p>
+                            <strong>${dia}</strong><br>
+                            Mínima: ${datos[dia].minima} °C<br>
+                            Máxima: ${datos[dia].maxima} °C
+                        </p>
+                    `;
+            }
+        })
+    </script>
     
 </body>
 </html>
