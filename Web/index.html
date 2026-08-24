@@ -12,23 +12,7 @@
 
     <div id="temperaturas"></div>
 
-    <script>
-        fetch("/temperaturas")
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            const contenedor = document.getElementById("temperaturas");
-
-            for(const dia in datos) {
-                contenedor.innerHTML += `
-                        <p>
-                            <strong>${dia}</strong><br>
-                            Mínima: ${datos[dia].minima} °C<br>
-                            Máxima: ${datos[dia].maxima} °C
-                        </p>
-                    `;
-            }
-        })
-    </script>
+    <script src="scripts.js"></script>
     
 </body>
 </html>
