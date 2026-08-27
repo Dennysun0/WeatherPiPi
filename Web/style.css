@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800pc;
+    margin: auto;
+    background-image: url(images/foto_web.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.temperatura-hoy{
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 10px;
+    width: 20rem;
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: white;
+    background: rgba(180, 146, 146, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(173, 182, 196, 0.3);
+}
+
+.temperatura-dia{
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 20rem;
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: white;
+    background: rgba(180, 146, 146, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(99, 107, 119, 0.3);
+}
+
+.temperaturas-extremos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.temperaturas-extremos div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.temperaturas-extremos span{
+    font-size: 14px;
+}
+
+.temperaturas-extremos strong{
+    font-size: 24px;
+}

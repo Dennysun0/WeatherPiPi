@@ -12,12 +12,19 @@ function mostrarTemperaturas(){
                 const hoy = dias.sort().at(-1);
 
                 contenedor.innerHTML += `
-                    <h2>Hoy</h2>
-                        <p>
-                            <strong>${formatearFecha(hoy)}</strong><br>
-                            Mínima: ${datos[hoy].minima} °C<br>
-                            Máxima: ${datos[hoy].maxima} °C
-                        </p>
+                    <div class="temperatura-hoy">    
+                        <h2>Hoy</h2>
+                        <strong>${formatearFecha(hoy)}</strong><br>
+                        <div class="temperaturas-extremos">
+                            <div>
+                                <span>Mínima</span>
+                                <strong>${datos[hoy].minima} °C</strong>
+                            </div>
+                            <div>
+                                <span>Máxima</span>
+                                <strong>${datos[hoy].maxima} °C</strong>
+                            </div>
+                    </div>
                 `;
 
 
@@ -30,11 +37,13 @@ function mostrarTemperaturas(){
                     }
 
                     contenedor.innerHTML += `
-                        <p>
-                            <strong>${formatearFecha(dia)}</strong><br>
-                            Mínima: ${datos[dia].minima} °C<br>
-                            Máxima: ${datos[dia].maxima} °C
-                        </p>
+                        <div class="temperatura-dia">
+                            <p>
+                                <strong>${formatearFecha(dia)}</strong><br>
+                                Mínima: ${datos[dia].minima} °C<br>
+                                Máxima: ${datos[dia].maxima} °C
+                            </p>
+                        </div>
                     `;
                 }
             })

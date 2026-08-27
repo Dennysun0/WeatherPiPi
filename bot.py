@@ -4,7 +4,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 from weather import obtener_temperatura
 import requests
 
-URL_RASPBERRY = "http://192.168.1.196:8000/temperaturas"
+URL_RASPBERRY = "http://192.168.1.60:8000/temperaturas"
 
 
 '''Función para /start'''
