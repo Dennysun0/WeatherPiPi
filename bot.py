@@ -51,7 +51,15 @@ def enviar_temperatura(dia, minima, maxima):
     return respuesta
 
 #Aquí creamos la aplicación de Telegram utilizando el bot en base al token de bot que le damos
-app= Application.builder().token("8868196951:AAFZIQcGVo-jloEluZhHPN70Kg5m0H6HmFo").build()
+app = (
+    Application.builder()
+    .token("8868196951:AAGwpuvrl1Vc_abrPShLY6LLzn86NaLaCCw")
+    .connect_timeout(30)
+    .read_timeout(30)
+    .write_timeout(30)
+    .pool_timeout(30)
+    .build()
+)
 
 
 #Registramos el comando, que crea la relación entre /start --> start()
